@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Portfolio</title>
+
+    <style>
+
+        @media screen and (max-width: 1400px) {
+            #home{
+                height: 83vh;
+                margin-bottom: 6rem;
+            }
+            .about_containers{
+                flex-wrap: wrap;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            #home, .portfolioinfo_container{
+                display: block;
+            }
+            .about_containers{
+                flex-wrap: wrap;
+            }
+
+            section, .home-pic{
+                height: fit-content;
+            }
+
+            section{
+                margin: 0 5%;
+            }
+
+            .home-pic{
+                width: 275px;
+                height: 275px;
+                margin: 0 auto 2rem;
+            }
+
+            .portfolioinfo_container{
+                width: 50px;
+                height: 25px;
+                margin: 0 auto 2rem;
+            }
+
+            .about_containers{
+                margin-top: 0%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            #home{
+                height: 83vh;
+                margin-bottom: 0;
+            }
+
+            #contact, footer{
+                height: 40vh;
+            }
+
+            footer nav{
+                height: fit-content;
+                margin-bottom: 2rem;
+            }
+
+            .about_containers, .top_contact_info, .btn-container{
+                flex-wrap: wrap;
+            }
+
+            .contact_container{
+                margin: 0%;
+            }
+
+            .home-pic{
+                font-size: 1.5rem;
+            }
+
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(19,19,77,1) 35%, rgba(50,54,66,1) 100%);
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        nav , .nav-ids{
+            display: flex;
+        }
+
+        nav{
+            height: 17vh;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-ids{
+            gap: 2rem;
+            list-style: none;
+            font-size: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-decoration-color: white;
+            margin: 10px 1rem;
+            font-weight: bold;
+            transition: all 300ms ease, transform 300ms ease;
+        }
+
+        nav a:hover {
+            color: black;
+            text-decoration: underline;
+            text-underline-offset: 1rem;
+            text-decoration-color: black;
+        }
+
+        .logoname{
+            color: white;
+            font-size: 2rem;
+        }
+
+        .logoname:hover{
+            cursor: default;
+        }
+
+        section {
+            padding-top: 4vh;
+            height: 96vh;
+            margin: 0 10rem;
+            box-sizing: border-box;
+            min-height: fit-content;
+        }
+
+        #home{
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            height: 80vh;
+        }
+
+        .home-pic{
+            display: flex;
+            height: 400px;
+            width: 400px;
+            margin: auto 0;
+        }
+
+        .home-pic img{
+            box-sizing: border-box;
+            border-radius: 200px;
+        }
+
+        .home-text{
+            align-self: center;
+            text-align: center;
+        }
+
+        .home-text p{
+            font-weight: 600;
+        }
+
+        .text-p{
+            color: white;
+            text-align: center;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            padding-bottom: 10px;
+        }
+
+        .text-title{
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .btn-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-btn{
+            font-weight: 600;
+            transition: all 300ms ease;
+            padding: 1rem;
+            width: 10rem;
+            border-radius: 2rem;
+        }
+
+        .about-btn:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        #about{
+            position: relative;
+        }
+
+        .about_containers{
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .about_info_containers{
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .about_containers, .about_info_containers{
+            display: flex;
+        }
+
+        .info_container{
+            background: white;
+            padding: 1.5rem;
+            flex: 1;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .icon{
+            width: 30px;
+        }
+
+        .text-container{
+            color: white;
+            text-align: center;
+        }
+
+        #portfolio{
+            position: relative;
+        }
+
+        .projecticon{
+            width: auto;
+            height: 40vh;
+            border-radius: 2rem;
+        }
+
+        #contact{
+            position: relative;
+        }
+
+        .top_contact_info{
+            display: flex;
+            justify-content: center;
+            border-radius: 2rem;
+            background: white;
+            margin: 2rem auto;
+            padding: 0.5rem;
+            width: 350px;
+            height: 10vh;
+            align-items: center;
+        }
+
+        .contact_container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        footer{
+            height: 26vh;
+            margin: 0 1rem;
+        }
+
+        footer p{
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logoname">Kyle Cania</div>
+        <div>
+            <ul class="nav-ids">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="home-pic">
+            <img src="./assets/profile_pic.jpg">
+        </div>
+        <div class="home-text">
+            <p class="text-title">Hi, I'm Kyle</p>
+            <h1 class="text-p">Welcome to My Portfolio. Explore my journey
+                and discover how I can help bring your projects to life.</h1>
+            <div class="btn-container">
+                    <button class="about-btn" 
+                    onclick="location.href='#about'">Get to know me!</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1 class="text-title">About Me</h1>
+        <p class="text-p">Get to know more about on me!</p>
+        <div class="about_info_containers">
+            <div class="about_containers">
+                <div class="info_container">
+                    <img src="./assets/education_icon.png" class="icon">
+                    <h2>Education</h2>
+                    <p>Bachelor of Science in Computer <br> Engineering</p>
+                </div>
+                <div class="info_container">
+                    <img src="./assets/skills_icon.png" class="icon2">
+                    <h2>Skills</h2>
+                    <p>Web Designing <br> Programming
+                        <br> Soft Skills(Time Management, 
+                        <br> Critical Thinking)</p>
+                </div>
+            </div>
+            <div class="text-container">
+                <p>Hi, I'm Kyle Cania, I am a computer engineering student 
+                    with a strong passion for creating impactful digital 
+                    experiences. I specialize in web development and application 
+                    design. I enjoy solving complex problems and turning innovative 
+                    ideas into reality. My mission is to deliver high-quality 
+                    solutions that meet user needs and exceed expectations.</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h1 class="text-title">Portfolio</h1>
+        <p class="text-p">Get to see my recent projects!</p>
+        <div class="about_info_containers">
+            <div class="about_containers">
+                <div class="info_container">
+                    <img src="./assets/project_1.png" class="projecticon">
+                    <h2>Project # 1</h2>
+                    <p>Portfolio</p>
+                </div>
+                <div class="info_container">
+                    <img src="./assets/project_2.png" class="projecticon">
+                    <h2>Project # 2</h2>
+                    <p>Offline Quiz Webpage</p>
+                </div>
+            </div>
+            <div class="text-container">
+                <p>Here's some of my works from previous years.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="text-title">Contact</h1>
+        <p class="text-p">Get in touch with me!</p>
+        <div class="top_contact_info">
+            <div class="contact_container">
+                <img src="./assets/contact_1.png" class="contacticon">
+                <p>nemenzokyle1975@gmail.com</p>
+            </div>
+        </div>
+        <div class="top_contact_info">
+            <div class="contact_container">
+                <img src="./assets/contact_2.png" class="contacticon">
+                <p>+63 912 415 3179</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <nav>
+            <div class="nav-ids-container">
+                <ul class="nav-ids">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2025 Kyle Cania. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
